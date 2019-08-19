@@ -81,10 +81,10 @@ span {
     cursor: pointer;
 }
 
-
-p {
-    margin: 0 auto;
-    position: relative;
-    width: 45px;
-    top: 40px;
+@media (orientation: landscape) {
+    .main-block {
+        width: 568px;
+        height: 320px;
+        flex-direction: row;
+    }   
 }

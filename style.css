@@ -23,10 +23,18 @@ html, body {
     background-color: white;
 }
 
-.main-block__progress-circle-block {
-    width: 120px;
-    height: 120px;
-    background-color: aqua;
+.main-block__progress-circle {
+    width: 160px;
+    height: 160px;
+}
+
+.main-block__progress-circle__circle {
+    stroke: rgb(255, 146, 4);
+    stroke-width: 6;
+    fill: transparent;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.5s;
 }
 
 .main-block__btn-block {

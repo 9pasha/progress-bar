@@ -1,8 +1,8 @@
 const circleProgress = document.querySelector('.circle');
 const svg = document.querySelector('svg');
-const allCircles = document.querySelectorAll('#btn-circle');
-const allButtons = document.querySelectorAll('#btn');
-const input = document.querySelector('.input');
+const allCircles = document.querySelectorAll('.btn-circle');
+const allButtons = document.querySelectorAll('.btn');
+const input = document.querySelector('.btn-block__input');
 const radius = circleProgress.r.baseVal.value;
 const circumference = 2 * Math.PI * radius;
 let timer = 0;

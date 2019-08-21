@@ -96,3 +96,10 @@ span {
         flex-direction: row;
     }   
 }
+
+.back {
+    stroke: rgb(90, 94, 91);
+    stroke-width: 10;
+    fill: transparent;
+    transform: translate(0px, 8px);
+}

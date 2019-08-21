@@ -1,11 +1,12 @@
 const circleProgress = document.querySelector('.circle');
+const svg = document.querySelector('svg');
 const allCircles = document.querySelectorAll('#btn-circle');
 const allButtons = document.querySelectorAll('#btn');
 const input = document.querySelector('.input');
-const degree = 0;
 const radius = circleProgress.r.baseVal.value;
 const circumference = 2 * Math.PI * radius;
 let timer = 0;
+let deg = -90;
 
 circleProgress.style.strokeDasharray = ''+circumference+' '+circumference+'';
 circleProgress.style.strokeDashoffset = 300;
@@ -18,16 +19,16 @@ function btnEvent() {
         allCircles[i].style.transform = 'translate(22px, -50%)';
         allCircles[i].style.backgroundColor = 'white';
         if (i == 1) {
-          circleProgress.style.visibility = 'hidden';
+          svg.style.visibility = 'hidden';
         } else {
-          animateCircle(degree);
+          animateCircle();
         }
       } else {
         allButtons[i].style.backgroundColor = '';
         allCircles[i].style.transform = '';
         allCircles[i].style.backgroundColor = '';
         if (i == 1) {
-          circleProgress.style.visibility = '';
+          svg.style.visibility = '';
         } else {
           clearTimeout(timer);
           circleProgress.style.transform = '';
@@ -37,9 +38,10 @@ function btnEvent() {
   }
 }
 
-function animateCircle(deg) {
+function animateCircle() {
   circleProgress.style.transform = 'rotate('+deg+'deg)';
-  deg += 1;
+  deg -= 1;
+  console.log(deg);
   timer = setTimeout(animateCircle, 30);
 }
 

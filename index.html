@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Progress Bar</title>
+    <title>Progress bar</title>
     <link rel="stylesheet" href="style.css">
     <script async src="main.js"></script>
 </head>
 <body>
     <div class="main-block main-block__inner">
-        <svg class="main-block__progress-circle">
-            <circle class="background-circle" cx="80" cy="80" r="68"/>
-            <circle class="main-block__circle circle" cx="80" cy="80" r="68"/>
-        </svg>
-        <div class="btn-block">
+        <div class="circle-block circle-block__inner">
+            <svg class="circle-block__progress-circle circle-block__progress-circle__inner">
+                <circle class="circle-block__background-circle" cx="80" cy="80" r="68"/>
+                <circle class="circle-block__circle" cx="80" cy="80" r="68"/>
+            </svg>
+        </div>
+        <div class="btn-block btn-block__inner">
             <input class="btn-block__input" type="number">
-            <div class="animation-toggle toggle">
-                <div class="btn-block__btn btn">
-                    <div class="btn-circle">
+            <div class="btn-block__toggle">
+                <div class="btn-block__btn">
+                    <div class="btn-block__btn-circle">
                     </div>
                 </div>
-                <span id="animate">Animate</span>
+                <span class="btn-block__span">Animate</span>
             </div>
-            <div class="hide-toggle toggle">
-                <div class="btn-block__btn btn">
-                    <div class="btn-circle"> 
+            <div class="btn-block__toggle">
+                <div class="btn-block__btn">
+                    <div class="btn-block__btn-circle"> 
                     </div>
                 </div>  
-                <span id="hide">Hide</span>
+                <span class="btn-block__span">Hide</span>
             </div>                              
         </div>
     </div>

@@ -1,12 +1,12 @@
-const circleProgress = document.querySelector('.circle');
+const circleProgress = document.querySelector('.circle-block__circle');
 const svg = document.querySelector('svg');
-const allCircles = document.querySelectorAll('.btn-circle');
-const allButtons = document.querySelectorAll('.btn');
+const allCircles = document.querySelectorAll('.btn-block__btn-circle');
+const allButtons = document.querySelectorAll('.btn-block__btn');
 const input = document.querySelector('.btn-block__input');
 const radius = circleProgress.r.baseVal.value;
 const circumference = 2 * Math.PI * radius;
 let timer = 0;
-let deg = -90;
+let deg = 0;
 
 circleProgress.style.strokeDasharray = ''+circumference+' '+circumference+'';
 circleProgress.style.strokeDashoffset = 300;
@@ -39,7 +39,7 @@ function btnEvent() {
 }
 
 function animateCircle() {
-  circleProgress.style.transform = 'rotate('+deg+'deg)';
+  document.querySelector('.circle-block').style.transform = 'rotate('+deg+'deg)';
   deg -= 1;
   console.log(deg);
   timer = setTimeout(animateCircle, 30);

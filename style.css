@@ -25,19 +25,24 @@ html, body {
     position: relative;
 }
 
-.background-circle {
+.circle-block__inner {
+    width: 160px;
+    height: 174px;
+}
+
+.circle-block__progress-circle__inner {
+    width: 168px;
+    height: 168px;
+}
+
+.circle-block__background-circle {
     stroke: rgb(90, 94, 91);
     stroke-width: 10;
     fill: transparent;
     transform: translate(0px, 8px);
 }
 
-.main-block__progress-circle {
-    width: 168px;
-    height: 168px;
-}
-
-.main-block__circle {
+.circle-block__circle {
     stroke: rgb(255, 146, 4);
     stroke-width: 10;
     fill: transparent;
@@ -51,6 +56,9 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+.btn-block__inner {
     width: 120px;
     height: 100px;
 }
@@ -66,14 +74,14 @@ html, body {
     left: -33px;
 }
 
-.toggle {
+.btn-block__toggle {
     display: flex;
     align-items: center;
     width: 110px;
     height: 30px;
 }
 
-span {
+.btn-block__span {
     margin-left: 5px;
 }
 
@@ -84,7 +92,7 @@ span {
     border-radius: 11px;
 }
 
-.btn-circle {
+.btn-block__btn-circle {
     position: relative;
     transform: translate(0, -50%);
     top: 50%;
